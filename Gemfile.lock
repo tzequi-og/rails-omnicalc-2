@@ -165,6 +165,9 @@ GEM
     http-form_data (2.3.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    image_processing (1.12.2)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     importmap-rails (1.1.6)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -188,6 +191,10 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    kredis (1.6.0)
+      activemodel (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      redis (>= 4.2, < 6)
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -202,6 +209,7 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mini_magick (4.12.0)
     mini_mime (1.1.2)
     minitest (5.18.1)
     msgpack (1.7.1)
@@ -235,6 +243,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
+    rack-mini-profiler (3.1.1)
+      rack (>= 1.2.0)
     rack-protection (3.0.6)
       rack
     rack-test (2.1.0)
@@ -320,6 +330,8 @@ GEM
     rspec-support (3.12.0)
     ruby-graphviz (1.2.5)
       rexml
+    ruby-vips (2.2.0)
+      ffi (~> 1.12)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     rufo (0.16.1)
@@ -347,6 +359,7 @@ GEM
       rack-protection (= 3.0.6)
       tilt (~> 2.0)
     specs_to_readme (0.1.0)
+    spring (4.1.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -416,6 +429,7 @@ DEPENDENCIES
   annotate
   appdev_support
   awesome_print
+  bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
   bootsnap
@@ -429,11 +443,14 @@ DEPENDENCIES
   grade_runner
   htmlbeautifier
   http
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
+  kredis
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
+  rack-mini-profiler
   rails (~> 7.0.4, >= 7.0.4.3)
   rails-erd
   rails_db
@@ -444,6 +461,7 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   specs_to_readme
+  spring
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
